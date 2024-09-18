@@ -14,7 +14,7 @@ from datasets.loader import PairLoader
 from models.dehazeformer import *
 from CNN.CNN_model import *
 from loss import *
-
+import torchvision.utils as vutils
 parser = argparse.ArgumentParser()
 parser.add_argument('--model', default='dehazeformer-t', type=str, help='model name')
 parser.add_argument('--num_workers', default=1, type=int, help='number of workers')
@@ -32,7 +32,7 @@ os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
 model = CNN()
 model = model.to(device)
 ############################################################################################################################################
-model_path1 = f'D:/wangshilong/DehazeFormer-main/CNN/indoor.pth'
+model_path1 = f'C:/Users/86198/PycharmProjects/pythonProject/myself/DehazeFormer-main/CNN/indoor.pth'
 model.load_state_dict(torch.load(model_path1, map_location="cuda:0"),strict=False)
 model.eval()
 
