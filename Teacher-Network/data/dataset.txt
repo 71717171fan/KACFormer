@@ -1,0 +1,8 @@
+The dataset to be processed is placed in this location with the following file directory.
+-----Data set name
+--------train
+----------haze
+----------clear
+--------test
+----------haze
+----------clear
